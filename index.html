@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1E88E5;
-            --secondary-color: #42A5F5;
-            --accent-color: #90CAF9;
+            --primary-color: #128C7E;
+            --secondary-color: #25D366;
+            --accent-color: #34B7F1;
             --background-color: #121212;
             --text-color: #F5F5F7;
             --card-color: #1E1E1E;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --gradient: linear-gradient(135deg, #0D47A1, #1E88E5, #64B5F6);
-            --gradient-light: linear-gradient(135deg, rgba(13, 71, 161, 0.1), rgba(30, 136, 229, 0.1), rgba(100, 181, 246, 0.1));
+            --gradient: linear-gradient(135deg, #075E54, #128C7E, #25D366);
+            --gradient-light: linear-gradient(135deg, rgba(7, 94, 84, 0.1), rgba(18, 140, 126, 0.1), rgba(37, 211, 102, 0.1));
             --whatsapp-green: #25D366;
             --whatsapp-dark-green: #075E54;
         }
 
         .light-mode {
-            --primary-color: #1565C0;
-            --secondary-color: #1E88E5;
-            --accent-color: #42A5F5;
+            --primary-color: #128C7E;
+            --secondary-color: #25D366;
+            --accent-color: #34B7F1;
             --background-color: #F5F5F7;
             --text-color: #1D1D1F;
             --card-color: #FFFFFF;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --gradient: linear-gradient(135deg, #0D47A1, #1E88E5, #64B5F6);
-            --gradient-light: linear-gradient(135deg, rgba(13, 71, 161, 0.1), rgba(30, 136, 229, 0.1), rgba(100, 181, 246, 0.1));
+            --gradient: linear-gradient(135deg, #075E54, #128C7E, #25D366);
+            --gradient-light: linear-gradient(135deg, rgba(7, 94, 84, 0.1), rgba(18, 140, 126, 0.1), rgba(37, 211, 102, 0.1));
             --whatsapp-green: #25D366;
             --whatsapp-dark-green: #075E54;
         }
@@ -93,7 +93,7 @@
             color: white;
             font-weight: bold;
             font-size: 22px;
-            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
             position: relative;
             overflow: hidden;
         }
@@ -220,11 +220,11 @@
         .app-image {
             width: 100%;
             height: 100%;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png');
-            background-size: 70%;
+            background-image: url('https://cdn3.iconfinder.com/data/icons/social-media-black-white-1/1024/whatsapp-512.png');
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: var(--whatsapp-green); /* خلفية خضراء للشعار الرسمي */
+            background-color: var(--whatsapp-green);
             border-radius: 50%;
             box-shadow: 
                 0 0 0 8px var(--whatsapp-dark-green),
@@ -383,7 +383,7 @@
             font-weight: 700;
             font-size: 20px;
             transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(30, 136, 229, 0.4);
+            box-shadow: 0 10px 30px rgba(18, 140, 126, 0.4);
             position: relative;
             overflow: hidden;
         }
@@ -401,7 +401,7 @@
 
         .details-btn:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(30, 136, 229, 0.6);
+            box-shadow: 0 15px 40px rgba(18, 140, 126, 0.6);
         }
 
         .details-btn:hover::before {
@@ -516,7 +516,7 @@
             right: 0;
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(30, 136, 229, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(18, 140, 126, 0.1) 0%, transparent 70%);
             z-index: -1;
         }
 
@@ -661,7 +661,7 @@
             background-color: var(--card-color);
             border-radius: 20px;
             width: 90%;
-            max-width: 500px;
+            max-width: 320px; /* تصغير المربع أكثر */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             transform: scale(0.9);
@@ -674,7 +674,7 @@
         }
 
         .modal-header {
-            padding: 20px;
+            padding: 15px; /* تصغير الهيدر */
             background: var(--gradient);
             color: white;
             text-align: center;
@@ -682,15 +682,15 @@
         }
 
         .modal-header h2 {
-            font-size: 24px;
+            font-size: 20px; /* تصغير حجم الخط */
             margin: 0;
         }
 
         .close-modal {
             position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
+            top: 12px;
+            right: 15px;
+            font-size: 20px; /* تصغير حجم علامة الإغلاق */
             cursor: pointer;
             transition: var(--transition);
         }
@@ -700,21 +700,22 @@
         }
 
         .modal-body {
-            padding: 30px;
+            padding: 20px; /* تصغير المسافات الداخلية */
         }
 
         .app-info {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 10px; /* تصغير المسافات بين العناصر */
+            margin-bottom: 20px;
         }
 
         .info-item {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 8px 0; /* تصغير المسافات */
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px; /* تصغير حجم الخط */
         }
 
         .info-label {
@@ -731,25 +732,25 @@
             width: 100%;
             background: var(--gradient);
             color: white;
-            padding: 15px;
+            padding: 12px; /* تصغير الحشوة */
             border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px; /* تصغير حجم الخط */
             transition: var(--transition);
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .modal-download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(30, 136, 229, 0.4);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
         }
 
         .mega-channel {
             text-align: center;
             margin-top: 15px;
-            font-size: 14px;
+            font-size: 12px; /* تصغير حجم الخط */
             opacity: 0.8;
         }
 
@@ -774,86 +775,62 @@
         }
 
         .welcome-content {
-            background-color: var(--card-color);
+            background-color: #1a1a2e;
             border-radius: 20px;
             width: 90%;
-            max-width: 500px;
+            max-width: 600px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             transform: scale(0.9);
             animation: scaleUp 0.3s forwards;
             border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .welcome-header {
-            padding: 20px;
-            background: var(--gradient);
-            color: white;
             text-align: center;
+            padding: 40px 30px;
             position: relative;
         }
 
-        .welcome-header h2 {
-            font-size: 24px;
-            margin: 0;
+        .robot-container {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .robot-container:hover {
+            transform: scale(1.02);
+        }
+
+        .robot-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .close-welcome {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
             cursor: pointer;
+            font-weight: 600;
             transition: var(--transition);
+            margin-top: 15px;
+            font-size: 16px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .close-welcome:hover {
-            transform: rotate(90deg);
-        }
-
-        .welcome-body {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .welcome-body p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--gradient-light);
-            padding: 12px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-link:hover {
-            background: var(--gradient);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .contact-label {
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: var(--primary-color);
+            transform: translateX(-50%) translateY(-3px);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -898,6 +875,10 @@
             
             .screenshot-container {
                 max-width: 90%;
+            }
+            
+            .robot-container {
+                height: 300px;
             }
         }
 
@@ -959,11 +940,11 @@
             <p>A premium WhatsApp application specially designed for iOS users, offering a unique experience with advanced features and enhanced security.</p>
             <a href="#" class="details-btn" id="detailsBtn">App Details</a>
             
-            <!-- قسم الصورة الإضافية -->
+            <!-- Additional Image Section -->
             <div class="app-screenshot">
-                <h3>App Photo</h3>
+                <h3>App Screenshot</h3>
                 <div class="screenshot-container">
-                    <img src="https://i.ytimg.com/vi/OBl6XlkiB0U/hq720.jpg?rs=AOn4CLDNjkHMuppAzvTStgaDZoLsfWBIhw&sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD" alt="iOS WhatsApp Screenshot" class="screenshot-image">
+                    <img src="https://i.ytimg.com/vi/-O4jSRQRRZA/maxresdefault.jpg" alt="iOS WhatsApp Screenshot" class="screenshot-image">
                 </div>
             </div>
         </div>
@@ -1020,7 +1001,7 @@
                 <a href="#" class="footer-link">Terms of Use</a>
                 <a href="#" class="footer-link">Contact Us</a>
             </div>
-            <p class="copyright">© 2025 iOS Store by iosmodx. All rights reserved.</p>
+            <p class="copyright">© 2025 iOS Store By Mohamed Ashraf . All rights reserved.</p>
         </div>
     </footer>
 
@@ -1059,7 +1040,7 @@
                     </div>
                 </div>
                 <p class="mega-channel">Join to our Telegram Channel: <a href="https://t.me/iosmodx" target="_blank">@ios_store_updates</a></p>
-                <a href="https://www.mediafire.com/file/h5nqbtisphnm9i8/WhatsApp_By_Mohamed_Ashraf.apk/file" class="modal-download-btn" target="_blank">Download WhatsApp</a>
+                <a href="https://www.mediafire.com/file/6t2l2gsmz77es5n/WhatsApp_iPhone.apk/file" class="modal-download-btn" target="_blank">Download WhatsApp</a>
                 <a href="https://mega.nz/file/61piBJYY#PSQIlpWULQf6DNFbFH4_wOzO15lZ1PrLSVze12guQag" class="modal-download-btn" target="_blank">Download Screen Split</a>
             </div>
         </div>
@@ -1068,30 +1049,11 @@
     <!-- Welcome Message Modal -->
     <div class="welcome-modal" id="welcomeModal">
         <div class="welcome-content">
-            <div class="welcome-header">
-                <h2>Welcome to iOS Store!</h2>
-                <span class="close-welcome" id="closeWelcome">&times;</span>
+            <div class="robot-container">
+                <img src="https://img.freepik.com/premium-photo/ai-chatbot-robot-sitting-desk-using-computer-generative-ai_666746-810.jpg" alt="Welcome Robot" class="robot-image">
             </div>
-            <div class="welcome-body">
-                <p>We're delighted to welcome you to our iOS Store! Thank you for visiting our website.</p>
-                <p>We're here to provide you with the best iOS applications and support. Feel free to contact our developer through any of the following channels:</p>
-                
-                <div class="contact-links">
-                    <div class="contact-label">Chat with the developer:</div>
-                    <a href="https://wa.me/201550425843" class="contact-link" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="https://www.instagram.com/mhamedashrf.0" class="contact-link" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://t.me/h_moh_za" class="contact-link" target="_blank">
-                        <i class="fab fa-telegram"></i>
-                        <span>Telegram</span>
-                    </a>
-                </div>
-            </div>
+            
+            <button class="close-welcome" id="closeWelcome">Close</button>
         </div>
     </div>
 
@@ -1141,11 +1103,11 @@
         };
         img.onerror = function() {
             // Use high-quality fallback image if loading fails
-            appImage.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png')";
+            appImage.style.backgroundImage = "url('https://cdn3.iconfinder.com/data/icons/social-media-black-white-1/1024/whatsapp-512.png')";
             appImage.classList.remove('loading');
         };
-        // استخدام الشعار الرسمي للواتساب
-        img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png';
+        // Use the new WhatsApp image
+        img.src = 'https://cdn3.iconfinder.com/data/icons/social-media-black-white-1/1024/whatsapp-512.png';
 
         // Image click event for welcome message
         const appImageContainer = document.getElementById('appImageContainer');
@@ -1157,7 +1119,7 @@
             document.body.style.overflow = 'hidden';
         });
 
-        // Close welcome modal when X is clicked
+        // Close welcome modal when button is clicked
         closeWelcome.addEventListener('click', () => {
             welcomeModal.style.display = 'none';
             document.body.style.overflow = 'auto';
@@ -1207,13 +1169,48 @@
             }
         });
 
-        // Show welcome message after page loads
+        // Show welcome message after page loads and play sound automatically
         window.addEventListener('load', () => {
             setTimeout(() => {
                 welcomeModal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
-            }, 2000);
+                
+                // Play welcome sound automatically
+                speakWelcomeMessage();
+            }, 1000);
         });
+
+        // Text-to-speech function for welcome message
+        function speakWelcomeMessage() {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance();
+                utterance.text = "Welcome to iOS WhatsApp. We offer you a different WhatsApp, and one of its main features is its similarity to WhatsApp on iPhone devices. This app was developed by Mohamed Ashraf.";
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                utterance.pitch = 0.8;
+                
+                // Try to set a male voice
+                const voices = speechSynthesis.getVoices();
+                const maleVoice = voices.find(voice => 
+                    voice.lang.includes('en') && 
+                    (voice.name.toLowerCase().includes('male') || 
+                     voice.name.toLowerCase().includes('david') ||
+                     voice.name.toLowerCase().includes('alex'))
+                );
+                
+                if (maleVoice) {
+                    utterance.voice = maleVoice;
+                } else if (voices.length > 0) {
+                    // Use first available English voice
+                    const englishVoice = voices.find(voice => voice.lang.includes('en'));
+                    if (englishVoice) {
+                        utterance.voice = englishVoice;
+                    }
+                }
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
 
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1234,7 +1231,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
